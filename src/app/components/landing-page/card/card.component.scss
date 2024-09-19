@@ -1,0 +1,87 @@
+:host::ng-deep .p-card .p-card-body{
+    padding: 0;
+    .p-card-content{
+        padding: 0;
+    }
+}
+:host::ng-deep button.p-ripple.p-element.p-carousel-next.p-link {
+    display: none;
+}
+:host::ng-deep button.p-ripple.p-element.p-carousel-prev.p-link {
+    display: none;
+}
+:host::ng-deep .p-card.p-component {
+    border-radius: 1em;
+}
+.bg-blue{
+    background-color: #00A3E0;
+}
+.text-white{
+    color:#FFFFFF;
+}
+.padding-1{
+    padding: 1em;
+}
+.flex{
+    display: flex;
+    gap: 1em;
+}
+.flex-1{
+    flex: 1;
+}
+.margin-1{
+    margin: 1em;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.mouse-pointer{
+    cursor: pointer;
+}
+.justify-end{
+    justify-content: end;
+}
+.card-image{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+.card-content{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.move-up-2{
+    margin-top:-2em ;
+}
+.move-up-03{
+    margin-top: -0.3em;
+}
+.title{
+    width: auto;
+    font-weight: bold;
+}
+.text-overflow-2{
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.read-all-news-explore-div {
+	display: flex;
+	justify-content: center;
+}
+.read-all-news-explore {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+	width: 300px;
+	border: 2px solid #00A3E0;
+	color: #00A3E0;
+}
+
+.read-all-news-explore:hover{
+  color: white;
+  background-color: #00A3E0;
+  border: 2px solid #00A3E0;
+}

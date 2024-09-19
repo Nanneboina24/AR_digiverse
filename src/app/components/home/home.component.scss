@@ -1,0 +1,22 @@
+::ng-deep {
+    .header {
+        position: relative;
+
+        // Defined Classes
+        .p-tabview-nav {
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .p-tabview .p-tabview-panels {
+            padding: 0px;
+        }
+
+    }
+}

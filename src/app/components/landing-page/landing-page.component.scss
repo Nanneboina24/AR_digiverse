@@ -1,0 +1,104 @@
+::ng-deep {
+    .landing {
+        .carousal {
+            .carousel-item-container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .carousel-video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .title {
+                position: absolute;
+                top: 20%;
+                width: 100%;
+                padding-left: 3%;
+                color: white;
+
+                .main-title {
+                    margin: 0px;
+                    font-weight: 600;
+                    font-size: 70px;
+                }
+
+                .sub-title {
+                    font-weight: 400;
+                    font-size: 20px;
+                }
+            }
+
+            .content {
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                padding-left: 3%;
+
+                .first-content {
+                    margin-top: 24px;
+                    padding: 16px 16px 16px 0px;
+                    width: 40%;
+                    // background-color: #FFFFFFCC;
+                    border-radius: 4px;
+                    color: white;
+                    line-height: 1.5em;
+                    font-size: 20px;
+                }
+
+                .second-content {
+                    margin-top: 24px;
+                    width: 30%;
+
+                    .avatar {
+                        // background-color: #FFFFFFCC;
+                        border-radius: 30px;
+                        padding: 4px;
+                        width: fit-content;
+                        padding-right: 24px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        //Pre Defined Classes
+        .p-carousel .p-carousel-content .p-carousel-next {
+            margin: 0px;
+            position: absolute;
+            right: 40px;
+            top: 90%;
+            z-index: 999;
+            color: white;
+        }
+
+        .p-carousel .p-carousel-content .p-carousel-next :hover {
+            color: black;
+        }
+
+        .p-carousel .p-carousel-content .p-carousel-prev {
+            margin: 0px;
+            position: absolute;
+            right: 90px;
+            top: 90%;
+            z-index: 999;
+            color: white;
+        }
+
+        .p-carousel .p-carousel-content .p-carousel-prev :hover {
+            color: black;
+        }
+
+        .p-carousel .p-carousel-indicators {
+            position: absolute;
+            top: 90%;
+            right: 45%;
+            display: none;
+        }
+    }
+}
