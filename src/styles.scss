@@ -3,6 +3,31 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Regular Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --font-family: "Ghawar", sans-serif;
+}
+
 body {
     margin: 0px;
     padding: 0px;

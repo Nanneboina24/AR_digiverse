@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { trigger, query, stagger, style, animate, transition } from '@angular/animations';
 
-
 @Component({
   selector: 'app-latest-news',
   templateUrl: './latest-news.component.html',
@@ -35,19 +34,21 @@ export class LatestNewsComponent {
   constructor(private datePipe: DatePipe) {}
 
 
-  newsItem = {
-    image: 'https://www.aramco.com/-/jssmedia/news/2024/global-ai-summit-gain.jpeg?cx=0.5&cy=0.5&cw=1504&ch=846',
+  newsItem =   {
+    image: 'https://www.aramco.com/-/jssmedia/news/2023/astonmartin_aramcoformulaoneteam.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
+    title: 'Aramco extends successful partnership with AM F1 to become its title partner',
+    shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, and Aston Martin Formula One® Team announce a long-term extension of their partnership.',
     createdBy: 'DHAHRAN',
     uploadedDate: new Date(),
-    title: 'Aramco unveils new initiatives to drive digital development',
-    shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, today unveiled new initiatives that aim to drive the development and deployment of advanced digital solutions across its operations.',
   };
+
+
 
   newsList = [
     {
-      image: 'https://www.aramco.com/-/jssmedia/news/2023/astonmartin_aramcoformulaoneteam.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
-      title: 'Aramco extends successful partnership with AM F1 to become its title partner',
-      shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, and Aston Martin Formula One® Team announce a long-term extension of their partnership.',
+      image: 'https://www.aramco.com/-/jssmedia/news/2024/global-ai-summit-gain.jpeg?cx=0.5&cy=0.5&cw=1504&ch=846',
+      title: 'Aramco unveils new initiatives to drive digital development',
+      shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, today unveiled new initiatives that aim to drive the development and deployment of advanced digital solutions across its operations.',
       uploadedDate: this.datePipe.transform(new Date(), '2024-10-15')
     },
     {
