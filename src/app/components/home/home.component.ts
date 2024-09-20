@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +29,16 @@ export class HomeComponent {
     } else {
       this.navbarSticky = false;
     }
+  }
+
+  @ViewChild('videoElement') videoElement!: ElementRef;
+
+  ngOnInit() {
+    const video = this.videoElement.nativeElement;
+    
+    video.addEventListener('canplaythrough', () => {
+      video.play();
+    });
   }
 
 }
