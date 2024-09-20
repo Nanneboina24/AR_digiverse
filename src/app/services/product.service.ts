@@ -23,7 +23,7 @@ export class ProductService {
         {
             id: '1001',
             code: 'nvklal433',
-            name: 'Aramco announces second quarter and half-year 2024 results',
+            name: 'Aramco announces second quarter and half-year 2024',
             description: 'Product Description',
             image: 'img2.jpg',
             price: 72,

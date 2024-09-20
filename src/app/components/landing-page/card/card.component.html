@@ -1,16 +1,16 @@
-<div style="margin: 2em 3em;">
+<div style="background-color: #F2F2F2; padding: 32px;">
     <div>
-        <p class="title" style="margin: 0px 14px">Latest Success Stories</p>
+        <h3 class="title primary-new font-semibold" style="margin: 0px 14px">Latest Success Stories</h3>
         <p-carousel #carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false"
             [responsiveOptions]="responsiveOptions">
             <ng-template let-product pTemplate="item">
                 <div class="margin-1">
                     <p-card>
-                        <img class="card-image" style="width: 100%;height: 8em;" src="../../assets/{{product.image }}"
+                        <img class="card-image" style="width: 100%;height: 12em;" src="../../assets/{{product.image }}"
                             alt="">
-                        <div class="bg-blue text-white padding-1 card-content" style="margin-top: -0.3em;">
+                        <div class="text-white padding-1 card-content" style="margin-top: -0.3em;">
                             <p class="title">{{product.name}}</p>
-                            <p class="text-overflow-2">Lorem ipsum dolor sit amet,consectetur adipisicing elit.
+                            <p class="text-overflow-2 description">Lorem ipsum dolor sit amet,consectetur adipisicing elit.
                                 Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero
                                 asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
                             </p>
@@ -21,7 +21,7 @@
             </ng-template>
         </p-carousel>
         <div class="read-all-news-explore-div mt-6">
-            <button pButton label="Read More" icon="pi pi-arrow-right"
+            <button pButton label="Read More Stories" icon="pi pi-arrow-right"
                 class="p-button-outlined read-all-news-explore p-2"></button>
         </div>
         <div class="flex wrap mouse-pointer justify-end move-up-2">
@@ -42,55 +42,8 @@
                 </svg>
             </div>
             <div></div>
-            <!-- <button pButton icon="pi pi-chevron-left" (click)="carousel.navBackward($event)" class="left-button"></button>
-        <button pButton icon="pi pi-chevron-right" (click)="carousel.navForward($event)" class="right-button"></button> -->
         </div>
 
     </div>
-    <p class="title" style="margin: 0px 14px">Digital portfolio</p>
-    <div class="flex">
-        <div class="flex-1">
-            <p-card>
-                <img class="card-image" style="width: 100%;height: 8em;" src="../../assets/img1.jpg" alt="">
-                <div class=" padding-1 card-content move-up-03">
-                    <p class="title">Aramco unveils new initiatives to drive digital development
-                    </p>
-                    <p class="text-overflow-2">New digital technologies such as Generative AI and the Industrial
-                        Internet of Things are expected to transform not only how we work, but also our commercial
-                        environment. </p>
 
-                </div>
-            </p-card>
-
-        </div>
-
-        <div class="flex-1">
-
-            <p-card>
-                <img class="card-image" style="width: 100%;height: 8em;" src="../../assets/img2.jpg" alt="">
-                <div class=" padding-1 card-content move-up-03">
-                    <p class="title">Aramco and NextDecade announce Heads of Agreement for offtake</p>
-                    <p class="text-overflow-2">Under the terms of the HoA, Aramco expects to purchase 1.2 million tonnes
-                        per annum (MTPA) of LNG for 20 years on a free on board basis, at a price indexed to Henry Hub.
-                    </p>
-
-                </div>
-            </p-card>
-
-        </div>
-        <div class="flex-1">
-            <p-card>
-                <img class="card-image" style="width: 100%;height: 8em;" src="../../assets/img3.jpg" alt="">
-
-                <div class=" padding-1 card-content move-up-03">
-                    <p class="title">Aramco plans $100m funding for KAUST to support cutting-edge R&D</p>
-                    <p class="text-overflow-2">Aramco plans to fund up to $100 million in research and development
-                        projects with KAUST over the next 10 years. The funds from Aramco have been earmarked for a wide
-                        range of initiatives, from essential research to applied technologies, as KAUST seeks to push
-                        the boundaries of science and innovation. </p>
-                </div>
-            </p-card>
-
-        </div>
-
-    </div>
+</div>
