@@ -6,11 +6,14 @@
             <ng-template let-product pTemplate="item">
                 <div class="margin-1">
                     <p-card>
-                        <img class="card-image" style="width: 100%;height: 12em;" src="../../assets/{{product.image }}"
-                            alt="">
+                        <div class="image-container" style="width: 100%;height: 12em;">
+                            <img class="card-image cursor-pointer"
+                                src="../../assets/{{product.image }}" alt="">
+                        </div>
                         <div class="text-white padding-1 card-content" style="margin-top: -0.3em;">
                             <p class="title">{{product.name}}</p>
-                            <p class="text-overflow-2 description">Lorem ipsum dolor sit amet,consectetur adipisicing elit.
+                            <p class="text-overflow-2 description">Lorem ipsum dolor sit amet,consectetur adipisicing
+                                elit.
                                 Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero
                                 asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
                             </p>
