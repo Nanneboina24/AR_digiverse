@@ -1,52 +1,63 @@
-<h3 class="news-header">Latest News</h3>
-<div class="grid">
-  <div>
-    <!-- First column content -->
-    <div class="latest-image-container">
-      <img [src]="newsItem.image" alt="News Image" class="latest-news-image" />
-    </div>
-    <h6 class="latest-news-createdby">
-      {{ newsItem.createdBy
-      }}<span class="latest-news-uploadedDate">
-        - {{ newsItem.uploadedDate | date }}</span
-      >
-    </h6>
-    <h3 class="latest-news-title">{{ newsItem.title }}</h3>
-    <h4 class="latest-news-desc">{{ newsItem.shortDesc }}</h4>
-  </div>
-
-  <div  [@newsAnimation]="newsList.length">
-    <!-- Second column content -->
-    <div *ngFor="let item of newsList; let i = index" class="news-list-item">
-      <div class="list-content">
-        <div class="thumb-container">
-          <img [src]="item.image" alt="Thumbnail" width="300px" height="125px" class="thumb-image" />
-        </div>
-        <div class="list-details">
-          <div class="title-arrow">
-            <h4 class="news-title">{{ item.title }}</h4>
-            <i class="pi pi-chevron-right arrow-icon"></i>
-          </div>
-          <h5 class="news-desc">{{ item.shortDesc }}</h5>
-          <h6 class="news-createdby">
-            <span class="news-uploadedDate">
-              {{ newsItem.uploadedDate | date }}</span
-            >
-          </h6>
-        </div>
+<div class="latest-news-section p-5">
+  <h3 class="news-header">Latest News</h3>
+  <div class="grid">
+    <div class="col-12 xs:col-12 lg:col-6">
+      <div class="latest-image-container my-3">
+        <img
+          [src]="newsItem.image"
+          alt="News Image"
+          class="latest-news-image"
+        />
       </div>
-      <p-divider
-        *ngIf="i < newsList.length - 1"
-        class="itemDivider"
-      ></p-divider>
+      <h6 class="latest-news-createdby pb-2">
+        {{ newsItem.createdBy
+        }}<span class="latest-news-uploadedDate">
+          - {{ newsItem.uploadedDate | date }}</span
+        >
+      </h6>
+      <h3 class="latest-news-title pb-2">{{ newsItem.title }}</h3>
+      <h4 class="latest-news-desc pb-2">{{ newsItem.shortDesc }}</h4>
+    </div>
+    <div
+      class="col-12 xs:col-12 lg:col-6"
+      id="news-scroll-element"
+      [@newsAnimation]="isVisible ? 'start' : 'stop'"
+    >
+      <div
+        *ngFor="let item of newsList; let i = index"
+        class="news-list-item my-3"
+      >
+        <div class="grid list-content p-2">
+          <div class="col-4 xs:col-12 sm:col-12 lg:col-4 p-0 thumb-container">
+            <img [src]="item.image" alt="Thumbnail" class="thumb-image" />
+          </div>
+          <div class="col-8 xs:col-12 sm:col-12 lg:col-8 px-4 list-details">
+            <h6 class="news-createdby pb-2">
+              {{ newsItem.createdBy }}-
+              <span class="news-uploadedDate">
+                {{ newsItem.uploadedDate | date }}</span
+              >
+            </h6>
+            <div class="title-arrow pb-2">
+              <h3 class="news-title">{{ item.title }}</h3>
+              <i class="pi pi-chevron-right arrow-icon"></i>
+            </div>
+            <h4 class="news-desc pb-2">{{ item.shortDesc }}</h4>
+          </div>
+        </div>
+        <p-divider
+          *ngIf="i < newsList.length - 1"
+          class="itemDivider"
+        ></p-divider>
+      </div>
     </div>
   </div>
-</div>
-<div class="read-all-news-explore-div">
-  <button
-    pButton
-    label="Read all News"
-    icon="pi pi-arrow-right"
-    class="p-button-outlined read-all-news-explore"
-  ></button>
+  <div class="read-all-news-explore-div">
+    <button
+      pButton
+      label="Read all News"
+      icon="pi pi-arrow-right"
+      class="p-button-outlined read-all-news-explore p-2"
+    ></button>
+  </div>
 </div>

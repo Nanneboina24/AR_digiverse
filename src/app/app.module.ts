@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { LatestNewsComponent } from './components/landing-page/latest-news/latest-news.component';
 import { DatePipe } from '@angular/common';
 import { CardComponent } from './components/landing-page/card/card.component';
+import { EventsTimelineComponent } from './components/landing-page/events-timeline/events-timeline.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { CardComponent } from './components/landing-page/card/card.component';
     HomeComponent,
     LandingPageComponent,
     LatestNewsComponent,
-    CardComponent
+    CardComponent,
+    EventsTimelineComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     PrimengModule,
     FormsModule

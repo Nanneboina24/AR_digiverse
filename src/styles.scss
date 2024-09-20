@@ -4,11 +4,41 @@
 @import "primeicons/primeicons.css";
 @import 'primeflex/primeflex.scss';
 
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ghawar';
+    src: url('assets/fonts/Ghawar_1.311-Regular Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --font-family: "Ghawar", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-//* common css *//
+h1,h2,h3,h4,h5,h6{
+    margin:0 !important;
+}
 
-//* ---- *//
+body{
+    overflow-y: scroll !important;
+}
