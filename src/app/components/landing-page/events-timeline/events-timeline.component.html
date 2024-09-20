@@ -1,4 +1,4 @@
-<h3 class="events-header">Latest Events</h3>
+<h3 class="events-header p-5">Latest Events</h3>
 <p-timeline id="event-scroll-element" [value]="events" [align]="timelineAlign" class="customized-timeline" [@timelineAnimation]="isVisible ? 'start' : 'stop'">
   <ng-template pTemplate="marker" let-event>
     <span
@@ -45,14 +45,14 @@
             >
           </div>
         </div>
-        <h3 class="event-name">{{ event.name }}</h3>
+        <h3 class="event-name pt-2">{{ event.name }}</h3>
         <!-- Short Description -->
         <p class="event-desc">
           {{ event.desc }}
         </p>
         
         <!-- View Event Button -->
-        <div class="view-event-container">
+        <div class="view-event-container py-2">
           <span class="view-event-span"
             >View Event<i
               class="pi pi-chevron-right arrow-icon view-event-icon"

@@ -15,6 +15,10 @@
 	width: 100%;
 	border-radius: 12px;
 	overflow: hidden;
+
+	@media (max-width:990px) {
+		height: 200px;
+	}
 }
 
 .latest-news-image {
@@ -56,6 +60,10 @@
 .thumb-container {
 	border-radius: 12px;
 	overflow: hidden;
+
+	@media (max-width:990px) {
+		height: 200px;
+	}
 }
 
 .thumb-image {
@@ -135,5 +143,12 @@
 
 	.p-divider.p-divider-horizontal:before {
 		border-top: 2px solid #e5e7eb !important;
+	}
+
+	.px-4 {
+		@media (max-width:990px) {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
 	}
 }
