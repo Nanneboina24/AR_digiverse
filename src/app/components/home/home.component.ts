@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,5 +12,23 @@ export class HomeComponent {
     'assets/video3.mp4',
     'assets/video2.mp4'
   ];
+
+  images: string[] = [
+    'assets/img7.jpg',
+    'assets/img8.jpg',
+    'assets/img9.jpg'
+  ];
+
+  navbarSticky: boolean = false;
+
+  // Listen to scroll events
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.scrollY > 100) {
+      this.navbarSticky = true;
+    } else {
+      this.navbarSticky = false;
+    }
+  }
 
 }
