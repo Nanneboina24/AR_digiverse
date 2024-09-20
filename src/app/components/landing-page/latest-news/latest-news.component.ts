@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { trigger, query, stagger, style, animate, transition } from '@angular/animations';
 
@@ -31,6 +31,7 @@ import { trigger, query, stagger, style, animate, transition } from '@angular/an
   ]
 })
 export class LatestNewsComponent {
+  isVisible: boolean = false;
   constructor(private datePipe: DatePipe) {}
 
 
@@ -47,21 +48,33 @@ export class LatestNewsComponent {
   newsList = [
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/global-ai-summit-gain.jpeg?cx=0.5&cy=0.5&cw=1504&ch=846',
-      title: 'Aramco unveils new initiatives to drive digital development',
-      shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, today unveiled new initiatives that aim to drive the development and deployment of advanced digital solutions across its operations.',
+      title: 'Aramco unveils digital initiatives',
+      shortDesc: 'Aramco introduces initiatives to boost digital solutions in its operations.',
       uploadedDate: this.datePipe.transform(new Date(), '2024-10-15')
     },
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/aramco-kaust-collaboration-web.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
-      title: 'Aramco plans $100m funding for KAUST to support cutting-edge R&D',
-      shortDesc: 'Aramco plans to fund up to $100 million in research and development projects with KAUST over the next 10 years.  The funds from Aramco have been earmarked for a wide range of initiatives, from essential research to applied technologies, as KAUST seeks to push the boundaries of science and innovation. ',
+      title: 'Aramco to fund $100M for KAUST R&D',
+      shortDesc: 'Aramco plans $100M for KAUST R&D over 10 years, supporting both essential research and applied technologies.',
       uploadedDate: this.datePipe.transform(new Date(), '2024-10-14')
     },
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/logo-aramco-fifa-original.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
-      title: 'Aramco and FIFA announce global partnership',
-      shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, has signed a four-year global partnership with FIFA.',
+      title: 'Aramco partners with FIFA',
+      shortDesc: 'Aramco signs a four-year global partnership with FIFA.',
       uploadedDate: this.datePipe.transform(new Date(), '2024-10-12')
     },
   ];
+
+   // Detect scroll and trigger animation
+   @HostListener('window:scroll', [])
+   onWindowScroll() {
+     const scrollPosition = window.scrollY;
+     const elementPosition = document.getElementById('news-scroll-element')?.offsetTop ?? 0;
+ 
+     // Adjust the scroll position to trigger the animation when the element is visible
+     if (scrollPosition + window.innerHeight >= elementPosition) {
+       this.isVisible = true;
+     }
+   }
 }

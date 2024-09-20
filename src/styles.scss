@@ -2,6 +2,7 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+@import 'primeflex/primeflex.scss';
 
 @font-face {
     font-family: 'Ghawar';
@@ -28,56 +29,12 @@
     --font-family: "Ghawar", sans-serif;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-//* common css *//
-.flex-row {
-    display: flex;
+h1,h2,h3,h4,h5,h6{
+    margin:0 !important;
 }
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.justify-content-between {
-    justify-content: space-between;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.justify-content-start {
-    justify-content: flex-start;
-}
-
-.justify-content-end {
-    justify-content: flex-end;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.gap-8 {
-    gap: 8px;
-}
-
-.gap-12 {
-    gap: 12px;
-}
-
-.gap-16 {
-    gap: 16px;
-}
-
-.gap-20 {
-    gap: 20px;
-}
-
-
-//* ---- *//

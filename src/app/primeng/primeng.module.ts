@@ -30,6 +30,8 @@ import { TagModule } from 'primeng/tag';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TabViewModule } from 'primeng/tabview';
 import { MenubarModule } from 'primeng/menubar';
+import { TimelineModule } from 'primeng/timeline';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @NgModule({
   declarations: [],
@@ -64,7 +66,8 @@ import { MenubarModule } from 'primeng/menubar';
     FloatLabelModule,
     TabViewModule,
     MenubarModule,
-
+    TimelineModule,
+    AnimateOnScrollModule
   ]
 })
 export class PrimengModule { }
