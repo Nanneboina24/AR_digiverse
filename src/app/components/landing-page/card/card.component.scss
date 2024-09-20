@@ -6,14 +6,6 @@
     }
 }
 
-:host::ng-deep button.p-ripple.p-element.p-carousel-next.p-link {
-    display: none;
-}
-
-:host::ng-deep button.p-ripple.p-element.p-carousel-prev.p-link {
-    display: none;
-}
-
 :host::ng-deep .p-card.p-component {
     border-radius: 1em;
 }
@@ -102,13 +94,11 @@
 
 .read-all-news-explore {
     width: 300px;
-    border: 2px solid #00A3E0;
-    color: #00A3E0;
     background-color: white;
 }
 
 .read-all-news-explore:hover {
     color: white;
-    background-color: #00A3E0;
-    border: 2px solid #00A3E0;
+    background-color: var(--blue-500);
+	border: 2px solid var(--blue-500);
 }
