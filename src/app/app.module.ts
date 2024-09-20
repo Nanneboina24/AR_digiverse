@@ -12,6 +12,7 @@ import { LatestNewsComponent } from './components/landing-page/latest-news/lates
 import { DatePipe } from '@angular/common';
 import { CardComponent } from './components/landing-page/card/card.component';
 import { EventsTimelineComponent } from './components/landing-page/events-timeline/events-timeline.component';
+import { OverviewComponent } from './components/landing-page/overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EventsTimelineComponent } from './components/landing-page/events-timeli
     LandingPageComponent,
     LatestNewsComponent,
     CardComponent,
-    EventsTimelineComponent
+    EventsTimelineComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
