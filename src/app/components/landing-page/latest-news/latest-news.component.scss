@@ -147,4 +147,17 @@
 			padding-right: 0px !important;
 		}
 	}
+
+	.see-more{
+		.p-button {
+            border: 2px solid;
+            background-color: white;
+        }
+
+        .p-button:hover {
+            color: white;
+            background-color: var(--blue-500);
+            border: 2px solid var(--blue-500);
+        }
+	}
 }
