@@ -2,7 +2,7 @@
   <h3 class="news-header primary-new font-semibold">Latest News</h3>
   <div class="grid">
     <div class="col-12 xs:col-12 lg:col-6">
-      <div class="latest-image-container my-3">
+      <div class="latest-image-container my-3 cursor-pointer">
         <img
           [src]="newsItem.image"
           alt="News Image"
@@ -28,7 +28,7 @@
         class="news-list-item my-3"
       >
         <div class="grid list-content p-2">
-          <div class="col-12 xs:col-12 sm:col-12 lg:col-4 p-0 thumb-container">
+          <div class="col-12 xs:col-12 sm:col-12 lg:col-4 p-0 thumb-container cursor-pointer">
             <img [src]="item.image" alt="Thumbnail" class="thumb-image" />
           </div>
           <div class="col-12 xs:col-12 sm:col-12 lg:col-8 px-4 list-details">
