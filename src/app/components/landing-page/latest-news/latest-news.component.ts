@@ -58,9 +58,9 @@ export class LatestNewsComponent {
       uploadedDate: this.datePipe.transform(new Date(), '2024-08-14')
     },
     {
-      image: 'https://www.aramco.com/-/jssmedia/news/2024/logo-aramco-fifa-original.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
-      title: 'Aramco partners with FIFA',
-      shortDesc: 'Aramco signs a four-year global partnership with FIFA.',
+      image: 'https://www.aramco.com/-/jssmedia/news/2023/leap-web.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
+      title: 'Aramco makes two major announcements at LEAP',
+      shortDesc: "Aramco announces a partnership with Zoom and increased funding for Wa'ed Ventures at LEAP 2023, a major tech conference in Saudi Arabia.",
       createdBy: 'DHAHRAN',
       uploadedDate: this.datePipe.transform(new Date(), '2024-08-12')
     },
