@@ -1,4 +1,4 @@
-<div style="background-color: #F2F2F2; padding: 32px;">
+<div style="padding: 32px;">
     <div>
         <h3 class="title primary-new font-semibold" style="margin: 0px 14px">Latest Success Stories</h3>
         <p-carousel #carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="true"
@@ -6,9 +6,16 @@
             <ng-template let-product pTemplate="item">
                 <div class="margin-1 zoominup animation-duration-1000 animation-delay-400">
                     <p-card>
-                        <div class="image-container" style="width: 100%;height: 12em;">
-                            <img class="card-image cursor-pointer"
-                                src="../../assets/{{product.image }}" alt="">
+                        <div class="image-container video-icon" style="width: 100%; height: 12em;"
+                            (click)="toggleVideo()">
+                            <video class="card-video cursor-pointer" [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true"
+                                #videoPlayer>
+                                <source [src]="product.image" type="video/mp4" />
+                            </video>
+                            <div class="play-icon-overlay" *ngIf="!isPlaying">
+                                <p-button icon="pi pi-play play-icon" size="small" [rounded]="true" [outlined]="true"
+                                    class="outlined" />
+                            </div>
                         </div>
                         <div class="text-white padding-1 card-content" style="margin-top: -0.3em;">
                             <p class="title">{{product.name}}</p>
@@ -28,10 +35,9 @@
                 class="p-button-outlined read-all-news-explore p-2"></button>
         </div> -->
         <div class="flex flex-row align-items-center gap-3 pt-3 justify-content-center white see-more">
-            <p class="black">See More Stories</p>
-            <p-button icon="pi pi-arrow-right" size="small" [rounded]="true" [outlined]="true"
-                class="outlined" />
-          </div>
+            <p class="white font-bold">See More Stories</p>
+            <p-button icon="pi pi-arrow-right" size="small" [rounded]="true" [outlined]="true" class="outlined" />
+        </div>
     </div>
 
 </div>

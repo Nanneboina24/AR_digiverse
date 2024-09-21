@@ -1,5 +1,5 @@
 .latest-news-section {
-	background-color: #FFFFFF;
+	// background-color: #FFFFFF;
 }
 
 .news-header {
@@ -41,11 +41,12 @@
 }
 
 .latest-news-title {
-	color: #323232;
+	// color: #323232;
+	color: white;
 }
 
 .latest-news-desc {
-	color: #808080;
+	color: rgba(255, 255, 255, 0.7);
 	font-weight: 400;
 }
 
@@ -93,11 +94,12 @@
 }
 
 .news-title {
-	color: #323232;
+	// color: #323232;
+	color: white;
 }
 
 .news-desc {
-	color: #808080;
+	color: rgba(255, 255, 255, 0.7);
 	font-weight: 400;
 }
 
@@ -148,16 +150,16 @@
 		}
 	}
 
-	.see-more{
+	.see-more {
 		.p-button {
-            border: 2px solid;
-            background-color: white;
-        }
+			border: 2px solid;
+			background-color: white;
+		}
 
-        .p-button:hover {
-            color: white;
-            background-color: var(--blue-500);
-            border: 2px solid var(--blue-500);
-        }
+		.p-button:hover {
+			color: white;
+			background-color: var(--blue-500);
+			border: 2px solid var(--blue-500);
+		}
 	}
 }

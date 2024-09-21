@@ -51,15 +51,15 @@
             >
           </div>
         </div>
-        <h3 class="event-name pt-2">{{ event.name }}</h3>
+        <h3 class="event-name pt-2 primary-new font-semibold">{{ event.name }}</h3>
         <!-- Short Description -->
-        <p class="event-desc">
+        <p class="event-desc" style="color: #808080;">
           {{ event.desc }}
         </p>
         
         <!-- View Event Button -->
         <div class="view-event-container py-2">
-          <span class="view-event-span flex flex-row align-items-center"
+          <span class="view-event-span flex flex-row align-items-center font-bold"
             >View Event<i
               class="pi pi-angle-double-right view-event-icon"
             ></i
@@ -69,8 +69,8 @@
     </div>
   </ng-template>
 </p-timeline>
-<div class="flex flex-row align-items-center gap-3 pt-3 justify-content-center see-more">
-  <p class="black">See More Events</p>
+<div class="flex flex-row align-items-center gap-3 pt-4 pb-4 justify-content-center see-more">
+  <p class="black font-bold">See More Events</p>
   <p-button icon="pi pi-arrow-right" size="small" [rounded]="true" [outlined]="true"
       class="outlined" />
 </div>

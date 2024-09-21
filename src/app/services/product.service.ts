@@ -13,7 +13,7 @@ export class ProductService {
             code: 'f230fh0g3',
             name: 'Aramco to become majority shareholder in Petro Rabigh',
             description: 'Product Description',
-            image: 'img1.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919893/video_3_lesks5.mp4',
             price: 65,
             category: 'Accessories',
             quantity: 24,
@@ -25,7 +25,7 @@ export class ProductService {
             code: 'nvklal433',
             name: 'Aramco announces second quarter and half-year 2024',
             description: 'Product Description',
-            image: 'img2.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919519/video4_w7qpu3.mp4',
             price: 72,
             category: 'Accessories',
             quantity: 61,
@@ -37,7 +37,7 @@ export class ProductService {
             code: 'zz21cz3c1',
             name: 'Aramco completes acquisition of 40% stake',
             description: 'Product Description',
-            image: 'img3.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919890/video_2_smfbao.mp4',
             price: 79,
             category: 'Fitness',
             quantity: 2,
@@ -49,7 +49,7 @@ export class ProductService {
             code: '244wgerg2',
             name: 'Blue T-Shirt',
             description: 'Product Description',
-            image: 'img4.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919893/video_3_lesks5.mp4',
             price: 29,
             category: 'Clothing',
             quantity: 25,
@@ -61,7 +61,7 @@ export class ProductService {
             code: 'h456wer53',
             name: 'Bracelet',
             description: 'Product Description',
-            image: 'img5.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919890/video_2_smfbao.mp4',
             price: 15,
             category: 'Accessories',
             quantity: 73,
@@ -73,7 +73,7 @@ export class ProductService {
             code: 'av2231fwg',
             name: 'Brown Purse',
             description: 'Product Description',
-            image: 'img6.jpg',
+            image: 'https://res.cloudinary.com/dpcikzup8/video/upload/v1726919519/video4_w7qpu3.mp4',
             price: 120,
             category: 'Accessories',
             quantity: 0,
@@ -1210,7 +1210,7 @@ getProductsMini() {
 }
 
 getProductsSmall() {
-    return Promise.resolve(this.getProductsData().slice(0, 10));
+    return Promise.resolve(this.getProductsData().slice(0, 6));
 }
 
 getProducts() {

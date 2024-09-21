@@ -9,13 +9,13 @@
           class="latest-news-image"
         />
       </div>
-      <h6 class="latest-news-createdby pb-2">
+      <h6 class="latest-news-createdby pb-2 white">
         {{ newsList[0].createdBy
         }}<span class="latest-news-uploadedDate">
           - {{ newsList[0].uploadedDate | date }}</span
         >
       </h6>
-      <h3 class="latest-news-title pb-2">{{ newsList[0].title }}</h3>
+      <h3 class="latest-news-title pb-2 font-bold">{{ newsList[0].title }}</h3>
       <h4 class="latest-news-desc pb-2">{{ newsList[0].shortDesc }}</h4>
     </div>
     <div
@@ -31,7 +31,7 @@
           <div class="col-12 xs:col-12 sm:col-12 lg:col-4 p-0 thumb-container cursor-pointer">
             <img [src]="item.image" alt="Thumbnail" class="thumb-image" />
           </div>
-          <div class="col-12 xs:col-12 sm:col-12 lg:col-8 px-4 list-details">
+          <div class="col-12 xs:col-12 sm:col-12 lg:col-8 px-4 list-details white">
             <h6 class="news-createdby pb-2">
               {{ item.createdBy }}-
               <span class="news-uploadedDate">
@@ -39,8 +39,8 @@
               >
             </h6>
             <div class="title-arrow pb-2">
-              <h3 class="news-title">{{ item.title }}</h3>
-              <i class="pi pi-chevron-right arrow-icon"></i>
+              <h3 class="news-title font-bold">{{ item.title }}</h3>
+              <i class="pi pi-chevron-right arrow-icon primary-new"></i>
             </div>
             <h4 class="news-desc pb-2">{{ item.shortDesc }}</h4>
           </div>
@@ -61,7 +61,7 @@
     ></button>
   </div> -->
   <div class="flex flex-row align-items-center gap-3 pt-3 justify-content-center see-more">
-    <p class="black">See More News</p>
+    <p class="white font-bold">See More News</p>
     <p-button icon="pi pi-arrow-right" size="small" [rounded]="true" [outlined]="true"
         class="outlined" />
   </div>

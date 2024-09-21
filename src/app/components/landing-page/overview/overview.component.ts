@@ -6,10 +6,22 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './overview.component.scss'
 })
 export class OverviewComponent {
-  images: string[] = [
-    'assets/img7.jpg',
-    'assets/img8.jpg',
-    'assets/img9.jpg'
+  images: any[] = [
+    {
+      name: 'Quarter Report',
+      desc: 'This quarter, D/IT achieved key project milestones and improved system performance. Upcoming initiatives focus on innovation and enhanced security.',
+      img: 'assets/img7.jpg'
+    },
+    {
+      name: 'Half-Yearly IT Report',
+      desc: 'D/IT completed major projects and implemented new technologies, driving efficiency. The next phase targets further optimization and scaling key services.',
+      img: 'assets/img8.jpg'
+    },
+    {
+      name: 'Annual IT Report',
+      desc: 'This year, D/IT achieved significant advancements in digital transformation and security. Looking ahead, the focus is on sustaining growth and innovation for future success.',
+      img: 'assets/img9.jpg'
+    }
   ];
 
   navbarSticky: boolean = false;
