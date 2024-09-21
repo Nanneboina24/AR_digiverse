@@ -5,11 +5,11 @@
 
 ::ng-deep {
     .p-timeline-event {
-        width: 80vw;
+        width: 60vw;
         margin: auto;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         .p-timeline-event-opposite {
             display: none;
         }
@@ -50,6 +50,7 @@
 .customized-timeline {
     .event-card {
         width: 80%;
+        height:auto;
         margin-bottom: 20px;
         border: 1px solid white;
         border-radius: 12px;
@@ -57,7 +58,7 @@
 
         .event-image-container {
             overflow: hidden;
-            height: 150px;
+            height: 125px;
             border-start-start-radius: 12px;
             border-start-end-radius: 12px;
         }
@@ -95,7 +96,7 @@
                     color: #676A6E;
                 }
 
-                @media (max-width: 1350px) {
+                @media (max-width: 1900px) {
                     display: flex;
                     flex-direction: column;
 

@@ -127,7 +127,7 @@ export class EventsTimelineComponent {
   // Function to update timeline alignment
   updateTimelineAlignment(screenWidth: number) {
     // Change alignment to 'left' if the screen is tablet size or smaller
-    if (screenWidth <= 768) {
+    if (screenWidth <= 990) {
       this.timelineAlign = 'left';
     } else {
       this.timelineAlign = 'alternate';
