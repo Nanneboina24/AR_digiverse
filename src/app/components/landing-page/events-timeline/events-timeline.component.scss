@@ -16,16 +16,18 @@
     }
 
     .p-timeline-event-separator {
-        margin: 8px !important;
+        margin: 0px 8px !important;
     }
 
     .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(odd) .p-timeline-event-content {
         display: flex;
         justify-content: flex-start;
     }
+
     .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(2n) .p-timeline-event-content {
         display: flex;
         justify-content: flex-end;
+        text-align: start;
     }
 }
 
@@ -107,16 +109,9 @@
             }
 
             .view-event-container {
-                padding: 0px;
-                color: #3b82f6;
-
-                .view-event-span {
-                    font-size: 14px;
-                }
-
                 .view-event-icon {
+                    color: #3b82f6;
                     margin-left: 10px;
-                    font-size: 10px;
                 }
             }
 

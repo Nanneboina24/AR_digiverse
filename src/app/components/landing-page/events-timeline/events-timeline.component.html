@@ -4,12 +4,18 @@
     <span
       class="event-icon-container"
       [style]="{
-        'background-color': event.color,
-        border: '1px solid ' + event.color,
-        'border-radius': '50%'
+        'background-color': event.type === 'internal' ? '#16325B' : '#3b82f6',
+        border: '1px solid '+(event.type === 'internal' ? '#16325B' : '#3b82f6'),
+        'border-radius': '50%',
+        display: 'flex',
+        'align-items': 'center',
+        'justify-content': 'center',
+        'width': '40px',
+        'height': '40px'
       }"
     >
-      <i [class]="event.icon" [style]="{ color: 'white', padding: '10px' }"></i>
+      <!-- Event Index in Icon -->
+      <span [style]="{ color: 'white', 'font-size': '16px', 'font-weight': 'bold' }">{{ event.index }}</span>
     </span>
   </ng-template>
   <ng-template pTemplate="content" let-event>
@@ -53,9 +59,9 @@
         
         <!-- View Event Button -->
         <div class="view-event-container py-2">
-          <span class="view-event-span"
+          <span class="view-event-span flex flex-row align-items-center"
             >View Event<i
-              class="pi pi-chevron-right arrow-icon view-event-icon"
+              class="pi pi-angle-double-right view-event-icon"
             ></i
           ></span>
         </div>

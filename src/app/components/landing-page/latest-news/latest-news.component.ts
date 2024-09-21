@@ -34,35 +34,35 @@ export class LatestNewsComponent {
   isVisible: boolean = false;
   constructor(private datePipe: DatePipe) {}
 
-
-  newsItem =   {
-    image: 'https://www.aramco.com/-/jssmedia/news/2023/astonmartin_aramcoformulaoneteam.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
-    title: 'Aramco extends successful partnership with AM F1 to become its title partner',
-    shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, and Aston Martin Formula One® Team announce a long-term extension of their partnership.',
-    createdBy: 'DHAHRAN',
-    uploadedDate: new Date(),
-  };
-
-
-
+  // from the api find the sort the list by uploadedDate by desc
   newsList = [
+    {
+      image: 'https://www.aramco.com/-/jssmedia/news/2023/astonmartin_aramcoformulaoneteam.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
+      title: 'Aramco extends successful partnership with AM F1 to become its title partner',
+      shortDesc: 'Aramco, one of the world’s leading integrated energy and chemicals companies, and Aston Martin Formula One® Team announce a long-term extension of their partnership.',
+      createdBy: 'DHAHRAN',
+      uploadedDate: new Date(),
+    },
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/global-ai-summit-gain.jpeg?cx=0.5&cy=0.5&cw=1504&ch=846',
       title: 'Aramco unveils digital initiatives',
       shortDesc: 'Aramco introduces initiatives to boost digital solutions in its operations.',
-      uploadedDate: this.datePipe.transform(new Date(), '2024-10-15')
+      createdBy: 'DHAHRAN',
+      uploadedDate: this.datePipe.transform(new Date(), '2024-08-15')
     },
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/aramco-kaust-collaboration-web.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
       title: 'Aramco to fund $100M for KAUST R&D',
       shortDesc: 'Aramco plans $100M for KAUST R&D over 10 years, supporting both essential research and applied technologies.',
-      uploadedDate: this.datePipe.transform(new Date(), '2024-10-14')
+      createdBy: 'DHAHRAN',
+      uploadedDate: this.datePipe.transform(new Date(), '2024-08-14')
     },
     {
       image: 'https://www.aramco.com/-/jssmedia/news/2024/logo-aramco-fifa-original.jpg?cx=0.5&cy=0.5&cw=1504&ch=846',
       title: 'Aramco partners with FIFA',
       shortDesc: 'Aramco signs a four-year global partnership with FIFA.',
-      uploadedDate: this.datePipe.transform(new Date(), '2024-10-12')
+      createdBy: 'DHAHRAN',
+      uploadedDate: this.datePipe.transform(new Date(), '2024-08-12')
     },
   ];
 

@@ -1,15 +1,22 @@
-import { Component,HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  query,
+  stagger,
+} from '@angular/animations';
 
 interface EventItem {
   name: string;
   date: string | null;
   duration: string;
   location: string;
-  icon: string;
-  color: string;
+  type: string;
   image: string;
+  index?: number;
   desc: string;
 }
 
@@ -21,15 +28,22 @@ interface EventItem {
     trigger('timelineAnimation', [
       transition('* => *', [
         // Animate the timeline items one after another
-        query('.p-timeline-event', [
-          style({ opacity: 0, transform: 'translateY(50px)' }),
-          stagger(500, [
-            animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
-          ]),
-        ], { optional: true })
-      ])
-    ])
-  ]
+        query(
+          '.p-timeline-event',
+          [
+            style({ opacity: 0, transform: 'translateY(50px)' }),
+            stagger(500, [
+              animate(
+                '600ms ease-out',
+                style({ opacity: 1, transform: 'translateY(0)' })
+              ),
+            ]),
+          ],
+          { optional: true }
+        ),
+      ]),
+    ]),
+  ],
 })
 export class EventsTimelineComponent {
   events: EventItem[];
@@ -43,56 +57,61 @@ export class EventsTimelineComponent {
         date: this.datePipe.transform(new Date(), 'fullDate'),
         duration: '1 hour',
         location: 'Riyadh, Saudi Arabia',
-        icon: 'pi pi-sign-in',
-        color: '#16325B',
-        image: 'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
+        image:
+          'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
         desc: 'An annual tech conference held in Riyadh, Saudi Arabia, that brings together tech professionals from around the world. ',
+        type: 'internal',
       },
       {
         name: 'Event 2',
         date: this.datePipe.transform(new Date(), 'fullDate'),
         duration: '2 hours',
         location: 'London, UK',
-        icon: 'pi pi-sign-out',
-        color: '#3b82f6',
-        image: 'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
+        image:
+          'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
         desc: 'An annual tech conference held in Riyadh, Saudi Arabia, that brings together tech professionals from around the world. ',
+        type: 'external',
       },
       {
         name: 'Event 3',
         date: this.datePipe.transform(new Date(), 'fullDate'),
         duration: '45 minutes',
         location: 'Riyadh, KSA',
-        icon: 'pi pi-sign-in',
-        color: '#16325B',
-        image: 'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
+        image:
+          'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
         desc: 'An annual tech conference held in Riyadh, Saudi Arabia, that brings together tech professionals from around the world. ',
+        type: 'internal',
       },
       {
         name: 'Event 4',
         date: this.datePipe.transform(new Date(), 'fullDate'),
         duration: '3 hours',
         location: 'New York, USA',
-        icon: 'pi pi-sign-out',
-        color: '#3b82f6',
-        image: 'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
+        image:
+          'https://media.licdn.com/dms/image/D4D12AQGIgqNcNsJ1hQ/article-cover_image-shrink_600_2000/0/1676450606391?e=2147483647&v=beta&t=M2qbEyixRtGyw9fhb0mQ3E7Hca8LJKCwdU87ZyBGToE',
         desc: 'An annual tech conference held in Riyadh, Saudi Arabia, that brings together tech professionals from around the world. ',
+        type: 'external',
       },
     ];
+
+    // Assign indexes to each event
+    this.events.forEach((event, index) => {
+      event.index = index + 1;
+    });
   }
 
   // Detect scroll and trigger animation
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY;
-    const elementPosition = document.getElementById('event-scroll-element')?.offsetTop ?? 0;
+    const elementPosition =
+      document.getElementById('event-scroll-element')?.offsetTop ?? 0;
 
     // Adjust the scroll position to trigger the animation when the element is visible
     if (scrollPosition + window.innerHeight >= elementPosition) {
       this.isVisible = true;
     }
   }
-
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

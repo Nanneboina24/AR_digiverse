@@ -4,19 +4,19 @@
     <div class="col-12 xs:col-12 lg:col-6">
       <div class="latest-image-container my-3 cursor-pointer">
         <img
-          [src]="newsItem.image"
+          [src]="newsList[0].image"
           alt="News Image"
           class="latest-news-image"
         />
       </div>
       <h6 class="latest-news-createdby pb-2">
-        {{ newsItem.createdBy
+        {{ newsList[0].createdBy
         }}<span class="latest-news-uploadedDate">
-          - {{ newsItem.uploadedDate | date }}</span
+          - {{ newsList[0].uploadedDate | date }}</span
         >
       </h6>
-      <h3 class="latest-news-title pb-2">{{ newsItem.title }}</h3>
-      <h4 class="latest-news-desc pb-2">{{ newsItem.shortDesc }}</h4>
+      <h3 class="latest-news-title pb-2">{{ newsList[0].title }}</h3>
+      <h4 class="latest-news-desc pb-2">{{ newsList[0].shortDesc }}</h4>
     </div>
     <div
       class="col-12 xs:col-12 lg:col-6"
@@ -24,7 +24,7 @@
       [@newsAnimation]="isVisible ? 'start' : 'stop'"
     >
       <div
-        *ngFor="let item of newsList; let i = index"
+        *ngFor="let item of newsList| slice:1; let i = index"
         class="news-list-item my-3"
       >
         <div class="grid list-content p-2">
@@ -33,9 +33,9 @@
           </div>
           <div class="col-12 xs:col-12 sm:col-12 lg:col-8 px-4 list-details">
             <h6 class="news-createdby pb-2">
-              {{ newsItem.createdBy }}-
+              {{ item.createdBy }}-
               <span class="news-uploadedDate">
-                {{ newsItem.uploadedDate | date }}</span
+                {{ item.uploadedDate | date }}</span
               >
             </h6>
             <div class="title-arrow pb-2">
