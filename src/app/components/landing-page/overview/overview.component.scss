@@ -162,6 +162,48 @@
                     transform: scale(1.2);
                 }
 
+
+                .p-autocomplete-input {
+                    padding-left: 33px;
+                  }
+
+                .p-inputtext{
+                    font-family: 'Ghawar','ManifaPro2',sans-serif;
+                    border-radius: 25px;
+                    margin-top: 1.5rem;
+                    height: 2.5rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    padding-left: 2.5rem;
+                    padding-right: 2.5rem;
+                }
+
+                .p-inputtext:enabled:hover{
+                    border-color: transparent;
+                }
+                // auto-complete
+                .global-search-container{
+                    position: relative;
+                }
+                .search-icon {
+                    z-index:9;
+                    position: absolute;
+                    left: 17px;
+                    top: 36px;
+                    color: #000;
+                  }
+
+                  .search-text{
+                    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+                  }
+
+                  p-autocomplete.p-autocomplete-clearable .p-autocomplete-clear-icon{
+                    margin-top: 4px;
+                    margin-right: 4px;
+                  }
+
             }
 
 

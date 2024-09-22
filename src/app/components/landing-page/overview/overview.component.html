@@ -1,68 +1,104 @@
 <div class="overview">
-    <div class="video-background">
-        <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true">
-            <source src="https://res.cloudinary.com/dpcikzup8/video/upload/v1726845300/video1_hh21si.mp4"
-                type="video/mp4" />
-        </video>
-        <div class="content">
-            <nav class="navbar" [ngClass]="navbarSticky ? 'stickynew' : ''">
-                <ul class="zoomin animation-duration-1000 animation-delay-400">
-                    <!-- <li><a href="#" class="primary-new">Home</a></li> -->
-                    <li><a href="#">Hero Stories</a></li>
-                    <li><a href="#">News Bites</a></li>
-                    <li><a href="#">Tech Corner</a></li>
-                    <li><a href="#">Market Intelligence</a></li>
-                    <li><a href="#">Digital Portfolio</a></li>
-                    <li><a href="#">Digital Events</a></li>
-                </ul>
-                <div class="logo scalein animation-duration-1000 animation-delay-400">
-                    <div class="title-1 primary-new">Digiverse</div>
-                    <!-- <div class="title-2 white moveText">by Aramco</div> -->
-                </div>
-            </nav>
+  <div class="video-background">
+    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true">
+      <source
+        src="https://res.cloudinary.com/dpcikzup8/video/upload/v1726845300/video1_hh21si.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="content">
+      <nav class="navbar" [ngClass]="navbarSticky ? 'stickynew' : ''">
+        <ul class="zoomin animation-duration-1000 animation-delay-400">
+          <!-- <li><a href="#" class="primary-new">Home</a></li> -->
+          <li><a href="#">Hero Stories</a></li>
+          <li><a href="#">News Bites</a></li>
+          <li><a href="#">Tech Corner</a></li>
+          <li><a href="#">Market Intelligence</a></li>
+          <li><a href="#">Digital Portfolio</a></li>
+          <li><a href="#">Digital Events</a></li>
+        </ul>
+        <div class="logo scalein animation-duration-1000 animation-delay-400">
+          <div class="title-1 primary-new">Digiverse</div>
+          <!-- <div class="title-2 white moveText">by Aramco</div> -->
+        </div>
+      </nav>
 
-            <div class="sub-content grid zoomindown animation-duration-1000 animation-delay-400">
-                <div class="col-6">
-                    <span class="primary-new font-semibold">Mission</span>
-                    <h1 class="white pt-3 letter-space-4">Innovation and Technology</h1>
-                    <!-- <div class="white flex flex-row gap-4 pt-2 letter-space-2" style="text-decoration: underline;">
+      <div
+        class="sub-content grid zoomindown animation-duration-1000 animation-delay-400"
+      >
+        <div class="col-6">
+          <span class="primary-new font-semibold">Mission</span>
+          <h1 class="white pt-3 letter-space-4">Innovation and Technology</h1>
+          <!-- <div class="white flex flex-row gap-4 pt-2 letter-space-2" style="text-decoration: underline;">
                         <p>Technology Track</p>
                         <p>Business Domain</p>
                     </div> -->
-                    <p class="white pt-3 line-height-3" style="width: 75%">At Saudi Aramco, Technological innovation is
-                        the process of creating and improving products, processes, and systems that use technology to
-                        significantly change how we meet human needs.</p>
-                    <div class="flex flex-row align-items-center gap-4 pt-3">
-                        <p class="white font-bold">See More</p>
-                        <p-button icon="pi pi-arrow-right" size="small" [rounded]="true" [outlined]="true"
-                            class="outlined" />
-                    </div>
+          <p class="white pt-3 line-height-3" style="width: 75%">
+            At Saudi Aramco, Technological innovation is the process of creating
+            and improving products, processes, and systems that use technology
+            to significantly change how we meet human needs.
+          </p>
+          <div class="flex flex-row align-items-center gap-4 pt-3">
+            <p class="white font-bold">See More</p>
+            <p-button
+              icon="pi pi-arrow-right"
+              size="small"
+              [rounded]="true"
+              [outlined]="true"
+              class="outlined"
+            />
+          </div>
+          <div class="global-search-container flex align-items-center">
+            <i class="pi pi-search search-icon"></i>
+            <p-autoComplete
+              [(ngModel)]="selectedDataAdvanced"
+              [suggestions]="filteredData"
+              (completeMethod)="filterDatas($event)"
+              field="name"
+              styleClass="global-search"
+              placeholder="Search for Success Stories, Events..."
+              size="35"
+              showClear="true"
+              [panelStyle]="{'margin-top':'15px', width:'67%',borderRadius:'32px',padding:'10px 7px',maxHeight:'300px'}"
+            >
+              <ng-template let-data pTemplate="item">
+                <div class="flex align-items-center  p-2">
+                  <img [src]="data.img" style="width: 75px; height: 50px;border-radius: 8px;" />
+                  <div class="search-text pl-3" style="font-weight: 600;color: black;">{{ data.name }}</div>
                 </div>
-                <div class="col-6 carousal-New">
-                    <p-carousel [value]="images" [numVisible]="1" [showIndicators]="false" [circular]="true"
-                        orientation="vertical">
-                        <ng-template pTemplate="item" let-image>
-                            <div class="item">
-                                <div class="background-image"
-                                    [ngStyle]="{'background-image': 'url(' + image.img + ')'}">
-                                </div>
-                                <div class="content flex flex-column justify-content-between">
-                                    <div>
-                                        <h4 class="primary-new font-semibold">{{image.name}}</h4>
-                                        <p class="white pt-3">{{image.desc}}</p>
-                                    </div>
-                                    <div class="flex flex-row align-items-center">
-                                        <p class="white pr-2">Explore</p>
-                                        <i class="pi pi-angle-double-right primary-new"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </ng-template>
-                    </p-carousel>
-                </div>
-
-            </div>
+              </ng-template>
+            </p-autoComplete>
+          </div>
         </div>
+        <div class="col-6 carousal-New">
+          <p-carousel
+            [value]="images"
+            [numVisible]="1"
+            [showIndicators]="false"
+            [circular]="true"
+            orientation="vertical"
+          >
+            <ng-template pTemplate="item" let-image>
+              <div class="item">
+                <div
+                  class="background-image"
+                  [ngStyle]="{ 'background-image': 'url(' + image.img + ')' }"
+                ></div>
+                <div class="content flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="primary-new font-semibold">{{ image.name }}</h4>
+                    <p class="white pt-3">{{ image.desc }}</p>
+                  </div>
+                  <div class="flex flex-row align-items-center">
+                    <p class="white pr-2">Explore</p>
+                    <i class="pi pi-angle-double-right primary-new"></i>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
