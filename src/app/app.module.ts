@@ -13,6 +13,7 @@ import { DatePipe } from '@angular/common';
 import { CardComponent } from './components/landing-page/card/card.component';
 import { EventsTimelineComponent } from './components/landing-page/events-timeline/events-timeline.component';
 import { OverviewComponent } from './components/landing-page/overview/overview.component';
+import { DetailPageComponent } from './components/detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OverviewComponent } from './components/landing-page/overview/overview.c
     LatestNewsComponent,
     CardComponent,
     EventsTimelineComponent,
-    OverviewComponent
+    OverviewComponent,
+    DetailPageComponent
   ],
   imports: [
     BrowserModule,

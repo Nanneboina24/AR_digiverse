@@ -1,0 +1,166 @@
+<div class="flex flex-column">
+  <nav class="navbar" [ngClass]="navbarSticky ? 'stickynew' : ''">
+    <ul class="zoomin animation-duration-1000 animation-delay-400">
+      <!-- <li><a href="#" class="primary-new">Home</a></li> -->
+      <li><a href="#" class="primary-new">Hero Stories</a></li>
+      <li><a href="#">News Bites</a></li>
+      <li><a href="#">Tech Corner</a></li>
+      <li><a href="#">Market Intelligence</a></li>
+      <li><a href="#">Digital Portfolio</a></li>
+      <li><a href="#">Digital Events</a></li>
+    </ul>
+    <div class="logo scalein animation-duration-1000 animation-delay-400">
+      <div class="title-1 primary-new">Digiverse</div>
+      <!-- <div class="title-2 white moveText">by Aramco</div> -->
+    </div>
+  </nav>
+  <div
+    class="flex flex-column justify-content-center align-items-center content"
+  >
+    <div class="module-heading text-lg">STORIES</div>
+    <p class="mt-5 text-6xl text-center">
+      Heading for hydrogen and a<br />lower-carbon future
+    </p>
+    <p class="mt-5 text-2xl text-center">
+      Aramco is working on providing the infrastructure and the<br />technologies
+      to help shape an emerging lower-carbon energy<br />economy, in Saudi
+      Arabia and beyond.
+    </p>
+    <img
+      class="mt-5 detail-image"
+      src="https://www.aramco.com/-/jssmedia/magazine/2024/heading-for-hydrogen/01_hero_img_hydrogen.jpg?cx=0.38&cy=0.49&cw=1504&ch=846"
+    />
+
+    <div
+      class="domain-class flex align-items-center justify-content-between mt-5"
+    >
+      <div class="module-heading text-lg">
+        ANDREW GRAY <span class="px-3">|</span>SEPTEMBER 15, 2024
+      </div>
+      <div class="chips flex align-items-center">
+        <p-chip styleClass="px-4 py-2" label="Innovation" />
+        <p-chip styleClass="mx-3 px-4 py-2" label="Environment" />
+        <p-chip styleClass="px-4 py-2" label="Sustainability" />
+      </div>
+    </div>
+
+    <div class="list-div mt-8 text-xl line-height-3">
+      <ul>
+        <li>
+          A global low-emissions future will rely on technology and energy
+          innovations on a huge scale, and Aramco is well positioned to play an
+          important role in a
+          <p-button
+            severity="secondary"
+            styleClass="px-2 py-1"
+            label="decarbonization"
+            (onClick)="op.toggle($event)"
+          />
+          world
+        </li>
+        <li>
+          Reducing carbon emissions is an important step, but not enough in and
+          of itself — carbon must be removed, and what is captured needs to
+          become a valuable resource in its own right
+        </li>
+        <li>
+          Hydrogen is also gaining significant traction as a viable lower-carbon
+          fuel for long-haul transport and as a ‘zero-emission at point of use’
+          energy source that can impact high-emitting industries
+        </li>
+      </ul>
+      <p class="py-8">
+        It is one of the greatest challenges of our time — the need to balance
+        the increasing demand for affordable and reliable energy with the need
+        to reduce global carbon and other gas emissions. Aramco’s primary energy
+        products oil and gas, natural resources that have enabled global growth
+        and prosperity for over a century, are in the spotlight within this
+        debate. However, hydrocarbons will have a key role in the energy mix for
+        some time yet, so what could the solution be, and how can we transition
+        towards environmental sustainability in the oil and gas industry?
+      </p>
+      <p class="py-7 text-5xl">
+        Repurposing CO2 and harnessing hydrogen’s potential
+      </p>
+      <p class="py-3">
+        What’s required is a future where the hydrocarbon value chain is
+        reimagined. One where the circular carbon economy is used as a framework
+        for not only managing and reducing emissions, but also removing carbon
+        from the atmosphere (Direct Air Capture) and turning it into a valuable
+        resource, more so than it already is in a limited range of commercial
+        applications.
+      </p>
+      <p class="py-3">
+        Our innovative practices already help Aramco maintain our position as
+        one of the lowest Upstream oil producers in our industry. We are also
+        rolling out — at industrial scale — technologies such as Carbon Capture,
+        and Storage (CCS), capturing carbon at source to be used for important
+        products such as plastics, fuels, and chemicals, or to support enhanced
+        oil recovery in our fields.
+      </p>
+      <p class="py-3">
+        And we are working on developing Saudi Arabia’s hydrogen infrastructure,
+        supporting the country’s ambition to become the largest hydrogen
+        producer in the world. Hydrogen is a potential game-changer in the
+        energy transition; reliable, efficient, and emitting no greenhouse gases
+        when burned — although, as a product primarily derived from natural gas,
+        it still has a carbon footprint. However, our current focus is on
+        manufacturing blue hydrogen, a production method in which the carbon
+        emissions are captured and sequestered for storage, or for utilization
+        in a number of useful processes, or transformed into new products. This
+        method of decarbonizing industrial processes, such as hydrogen
+        production, is called Carbon Capture and Storage (CCS), or Carbon
+        Capture, Utilization and Storage (CCUS), and we are looking at
+        scaling-up the technology and commoditizing this resource on a global
+        scale.
+      </p>
+    </div>
+    <div class="second-image grid domain-class mt-8">
+      <div class="col-6 text-xl line-height-3">
+        <p class="text-6xl py-2 line-height-1">Hydrogen — a new name for energy</p>
+        <p class="py-2">
+          Hydrogen is a naturally-occurring chemical element, the simplest and
+          most abundant in the universe, but here on Earth it’s not freely
+          available in high enough quantities (in the form of hydrogen gas, H2)
+          to be commercially viable as a method of providing energy for domestic
+          or industrial purposes. This means that it needs to be separated from
+          compounds formed with other elements, mostly from hydrocarbons, with
+          the most common method of production being natural gas reforming — the
+          reacting of natural gas with super-heated steam.
+        </p>
+        <p class="py-2">
+          There has been increasing global momentum to view hydrogen as critical
+          to a more efficient and affordable energy transition, with the
+          potential to replace carbon-intensive fuels in a whole range of
+          applications. These include generating power and heat, fueling trucks,
+          and in the production processes of hard to abate industries such as
+          construction, steel, and cement manufacturing.
+        </p>
+      </div>
+      <div class="col-5 col-offset-1">
+        <img
+        class="mt-5 detail-image"
+        src="https://www.aramco.com/-/jssmedia/magazine/2024/heading-for-hydrogen/02_steelindustry.jpg?cx=0.5&cy=0.5&cw=592&ch=592"
+      />
+      <p class="text-base mx-5 my-3">
+        Hydrogen may have the potential to replace some fuels in the construction and steel industries
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-overlayPanel
+  #op
+  [style]="{ width: '450px', padding: '20px' }"
+  [showCloseIcon]="true"
+>
+  <div>
+    decarbonizing
+    <p class="mt-2">
+      the process of reducing the levels of carbon emissions (such as carbon
+      dioxide) caused by or involved in (something, such as a facility, process,
+      or organization)
+    </p>
+  </div>
+</p-overlayPanel>

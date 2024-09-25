@@ -34,6 +34,7 @@ import { RippleModule } from 'primeng/ripple';
 import { TimelineModule } from 'primeng/timeline';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @NgModule({
   declarations: [],
@@ -71,7 +72,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     RippleModule,
     TimelineModule,
     AnimateOnScrollModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    OverlayPanelModule
   ]
 })
 export class PrimengModule { }
